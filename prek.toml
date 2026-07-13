@@ -8,7 +8,7 @@ hooks = [
   { id = "check-case-conflict", groups = ["ci"] },
   { id = "check-illegal-windows-names", groups = ["ci"] },
   { id = "check-merge-conflict", groups = ["ci"] },
-  { id = "mixed-line-ending", groups = ["ci"] },
+  { id = "mixed-line-ending", args=["--fix=lf"], groups = ["ci"] },
   { id = "check-toml", groups = ["ci"] },
   { id = "check-yaml", files = "\\.(yml|yaml)$", groups = ["ci"] },
 ]
