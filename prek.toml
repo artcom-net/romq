@@ -10,7 +10,7 @@ hooks = [
   { id = "check-merge-conflict", groups = ["ci"] },
   { id = "mixed-line-ending", args=["--fix=lf"], groups = ["ci"] },
   { id = "check-toml", groups = ["ci"] },
-  { id = "check-yaml", files = "\\.(yml|yaml)$", groups = ["ci"] },
+  { id = "check-yaml", groups = ["ci"] },
 ]
 
 [[repos]]
