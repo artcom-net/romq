@@ -1,3 +1,4 @@
+import sys
 import tempfile
 from pathlib import Path
 
@@ -13,4 +14,8 @@ def tmp_dir(request: pytest.FixtureRequest, fs: FakeFilesystem) -> Path:
         request.function.__name__,  # pyright: ignore[reportAny]
     )
     _ = fs.create_dir(dir_path)  # pyright: ignore[reportUnknownMemberType]
+
+    if sys.platform == "linux":
+        fs.add_real_file("/proc/meminfo")  # pyright: ignore[reportUnknownMemberType, reportUnusedCallResult]
+
     return dir_path
