@@ -30,7 +30,17 @@
 
 ### Install
 
-*TODO*
+Install via `uv`:
+
+```bash
+uv add romq
+```
+
+Or using `pip`:
+
+```bash
+pip install romq
+```
 
 ## Usage
 
