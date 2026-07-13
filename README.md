@@ -76,7 +76,8 @@ roms/rom2.7z
   [iNES 2.0 | RP2C02 (NTSC NES) | Mapper 4 | Horizontal | PRG 262144 | CHR 262144]
 ROM matches: 2, Errors: 0
 ```
-*See `romq nes search --help` for all available options.*
+
+See `romq nes search --help` for all available options.
 
 ### Library
 
