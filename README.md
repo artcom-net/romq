@@ -103,9 +103,9 @@ try:
     # Or from a archive (ZIP, 7z)
     # romq.nes.inspect_rom("roms/rom.zip")
 
-    print(rom_info.mapper_id)       # 4
-    print(rom_info.rom_format)      # RomFormat.INES_20
-    print(rom_info.console_type)    # ConsoleType.NES
+    print(rom_info.mapper_id)  # 4
+    print(rom_info.rom_format)  # RomFormat.INES_20
+    print(rom_info.console_type)  # ConsoleType.NES
     # See `romq.nes.RomInfo` for all available fields
 except romq.errors.RomqError as error:
     print(f"ROM inspection error: {error}")
@@ -134,8 +134,9 @@ result = romq.nes.search_roms(
         has_battery=True,
         has_trainer=False,
         has_alternate_nt=False,
-    )
+    ),
 )
+
 
 # Use a predicate for complex logic (field filters are ignored if predicate is given)
 def custom_filter(metadata: romq.nes.RomMetadata) -> bool:
@@ -145,6 +146,7 @@ def custom_filter(metadata: romq.nes.RomMetadata) -> bool:
         and metadata.tv_system == romq.nes.TvSystem.NTSC
         # See `romq.nes.RomMetadata` for all available fields
     )
+
 
 result = romq.nes.search_roms("/roms", predicate=custom_filter)
 
