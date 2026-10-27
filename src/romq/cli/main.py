@@ -45,5 +45,5 @@ def main() -> None:
 
 
 @main.result_callback()
-def _process_result(result: Renderable) -> None:  # pyright: ignore[reportUnusedFunction]
+def _process_result(result: Renderable) -> None:
     click.echo(render(result))

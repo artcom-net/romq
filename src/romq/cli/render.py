@@ -30,12 +30,12 @@ def _render(data: Renderable) -> str:
 
 
 @_render.register
-def _render_error(data: Exception) -> str:  # pyright: ignore[reportUnusedFunction]
+def _render_error(data: Exception) -> str:
     return click.style(f"{data}", fg="bright_red")
 
 
 @_render.register
-def _render_rom_info(data: nes_app.RomInfo) -> str:  # pyright: ignore[reportUnusedFunction]
+def _render_rom_info(data: nes_app.RomInfo) -> str:
     rows: list[str] = [click.style(f"ROM: {data.filepath}", fg="bright_cyan")]
 
     metadata = data.metadata
@@ -75,7 +75,7 @@ def _render_rom_info(data: nes_app.RomInfo) -> str:  # pyright: ignore[reportUnu
 
 
 @_render.register
-def _render_search_result(data: nes_app.SearchResult) -> str:  # pyright: ignore[reportUnusedFunction]
+def _render_search_result(data: nes_app.SearchResult) -> str:
     rows: list[str] = []
 
     for match in data.matches:

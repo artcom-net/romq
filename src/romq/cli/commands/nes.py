@@ -10,7 +10,7 @@ nes_group = click.Group("nes", help="NES ROM inspection and search utilities")
     help="Display metadata for a single NES ROM file or an archive (ZIP/7z).",
 )
 @click.argument("rom_path")
-def _inspect_rom(rom_path: str) -> nes_app.RomInfo:  # pyright: ignore[reportUnusedFunction]
+def _inspect_rom(rom_path: str) -> nes_app.RomInfo:
     return nes_app.inspect_rom(rom_path)
 
 
@@ -79,7 +79,7 @@ def _inspect_rom(rom_path: str) -> nes_app.RomInfo:  # pyright: ignore[reportUnu
     default=None,
     help="Alternate nametable layout",
 )
-def _search_roms(  # pyright: ignore[reportUnusedFunction]  # noqa: PLR0913 PLR0917
+def _search_roms(  # noqa: PLR0913 PLR0917
     root_dir: str,
     mapper_id: int | None,
     submapper_id: int | None,
