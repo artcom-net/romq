@@ -79,7 +79,7 @@ def _inspect_rom(rom_path: str) -> nes_app.RomInfo:  # pyright: ignore[reportUnu
     default=None,
     help="Alternate nametable layout",
 )
-def _search_roms(  # pyright: ignore[reportUnusedFunction]  # noqa: PLR0913
+def _search_roms(  # pyright: ignore[reportUnusedFunction]  # noqa: PLR0913 PLR0917
     root_dir: str,
     mapper_id: int | None,
     submapper_id: int | None,

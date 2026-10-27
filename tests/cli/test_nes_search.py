@@ -14,7 +14,7 @@ from tests.cli.utils import clear_ansi_escape, mock_app_func
 _mock_search = functools.partial(mock_app_func, nes, "search_roms")
 
 
-def _make_search_query(  # noqa: PLR0913
+def _make_search_query(  # noqa: PLR0913 PLR0917
     mapper_id: int | None = None,
     submapper_id: int | None = None,
     rom_format: nes.RomFormat | None = None,
